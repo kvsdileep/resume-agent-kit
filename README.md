@@ -2,7 +2,7 @@
 
 Build your own team of AI agents that **reviews your resume, builds one from your LinkedIn profile, matches you to any job, and finds open roles that suit you**. No coding needed: you build every agent by pasting plain-English instructions into Claude.
 
-> 📘 **Start here:** download this kit, then open [`starter/GUIDE.pdf`](starter/GUIDE.pdf) and follow it step by step. (A text version is in [`starter/GUIDE.md`](starter/GUIDE.md).)
+> 📘 **Start here:** download this kit, then follow the step-by-step guide your mentor shares with you. (A text version is in [`starter/GUIDE.md`](starter/GUIDE.md).)
 
 ---
 
@@ -49,7 +49,7 @@ You talk to one agent, the **coordinator**, by typing `/resume`. It hands the wo
 
 1. Click the green **Code** button above, then **Download ZIP**, and unzip it.
 2. Open the Claude desktop app, go to the **Code** tab, and open the `starter` folder.
-3. Open `starter/GUIDE.pdf` and follow Step 0 onwards.
+3. Follow the step-by-step guide from Step 0 onwards.
 
 **Just want to try the finished version?** Open the `finished` folder in Claude instead, add the two search tools (guide Step 1), drop your PDF into `finished/inbox/`, and type `/resume`.
 
@@ -57,7 +57,7 @@ You talk to one agent, the **coordinator**, by typing `/resume`. It hands the wo
 
 ```
 starter/                  ← you build in here
-  GUIDE.pdf · GUIDE.md      the step-by-step guide
+  GUIDE.md                  the step-by-step guide (text version)
   inbox/                    put your resume or LinkedIn PDF here
   output/                   the agents' work appears here
   templates/                the resume design
