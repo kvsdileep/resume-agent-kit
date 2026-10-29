@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TITLE: the person's full name, then " - Resume" -->
+<title>Full Name - Resume</title>
+<style>
+  /* Print setup: one A4 page with even margins. */
+  @page { size: A4; margin: 14mm 16mm; }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    margin: 0;
+    background: #eceff3;
+    color: #1f2933;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.38;
+  }
+
+  /* On screen the resume looks like a sheet of paper. */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12mm auto;
+    padding: 14mm 16mm;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  header { padding-bottom: 3.5mm; border-bottom: 1.5pt solid #1d4e6b; }
+  h1 { margin: 0; font-size: 22pt; line-height: 1.1; font-weight: 700; letter-spacing: 0.2pt; color: #12384f; }
+  .headline { margin: 1.5mm 0 0; font-size: 11pt; font-weight: 600; color: #3b4a57; }
+  .contact { margin: 1.5mm 0 0; font-size: 9.5pt; color: #3b4a57; }
+  .contact span + span::before { content: "  |  "; color: #8795a1; white-space: pre; }
+
+  section { margin-top: 4.5mm; }
+  h2 {
+    margin: 0 0 1.5mm;
+    padding-bottom: 0.8mm;
+    border-bottom: 0.75pt solid #c5ced6;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 1.1pt;
+    text-transform: uppercase;
+    color: #1d4e6b;
+  }
+
+  p { margin: 0; }
+
+  .role { margin-top: 2.8mm; break-inside: avoid; }
+  .role:first-of-type { margin-top: 0; }
+  .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 6mm; }
+  .role-title { font-weight: 700; font-size: 10.5pt; color: #12384f; }
+  .role-title .company { font-weight: 600; color: #1f2933; }
+  .dates { white-space: nowrap; font-size: 9.5pt; color: #52606d; }
+
+  ul { margin: 1mm 0 0; padding-left: 4.5mm; }
+  li { margin: 0 0 0.7mm; padding-left: 0.5mm; }
+
+  .entry { margin-top: 1.2mm; break-inside: avoid; }
+  .entry:first-of-type { margin-top: 0; }
+
+  /* Print: drop the paper-sheet look, the @page margin does the spacing. */
+  @media print {
+    body { background: #ffffff; }
+    .page { width: auto; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER: name, headline, then one contact line. Leave out any contact item that is not in profile.md.
+     LinkedIn is shown as plain text, not a link. -->
+<header>
+  <h1>Full Name</h1>
+  <p class="headline">Headline</p>
+  <p class="contact"><span>City, Country</span><span>name@example.com</span><span>+00 00000 00000</span><span>linkedin.com/in/example</span></p>
+</header>
+
+<!-- SUMMARY: two or three sentences. Leave this whole section out if profile.md has no summary. -->
+<section>
+  <h2>Summary</h2>
+  <p>Summary text.</p>
+</section>
+
+<!-- EXPERIENCE: one .role block per job, newest first. Repeat the block as needed. -->
+<section>
+  <h2>Experience</h2>
+
+  <div class="role">
+    <div class="role-head">
+      <span class="role-title">Role Title, <span class="company">Company</span></span>
+      <span class="dates">Start – End</span>
+    </div>
+    <ul>
+      <li>Achievement or responsibility.</li>
+      <li>Achievement or responsibility.</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- SKILLS: one line of skills separated by commas. Leave this whole section out if profile.md has none. -->
+<section>
+  <h2>Skills</h2>
+  <p>Skill one, Skill two, Skill three</p>
+</section>
+
+<!-- EDUCATION: one .entry per degree. Leave this whole section out if profile.md has none. -->
+<section>
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="role-head">
+      <span><span class="role-title">Degree</span>, School</span>
+      <span class="dates">Year</span>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS: one li per certification. Leave this whole section out if profile.md has none. -->
+<section>
+  <h2>Certifications</h2>
+  <ul>
+    <li>Certification</li>
+  </ul>
+</section>
+
+</div>
+</body>
+</html>

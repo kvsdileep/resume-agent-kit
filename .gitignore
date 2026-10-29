@@ -1,0 +1,10 @@
+.DS_Store
+# keep your own resume and results out of git
+starter/inbox/*
+!starter/inbox/.keep
+starter/output/*
+!starter/output/.keep
+finished/inbox/*
+!finished/inbox/.keep
+finished/output/*
+!finished/output/.keep
