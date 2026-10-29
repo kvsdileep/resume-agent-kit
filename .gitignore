@@ -8,3 +8,6 @@ finished/inbox/*
 !finished/inbox/.keep
 finished/output/*
 !finished/output/.keep
+
+# guide PDF stays local; the mentor shares it separately
+starter/GUIDE.pdf
